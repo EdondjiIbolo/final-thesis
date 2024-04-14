@@ -1,0 +1,57 @@
+.menu__link:hover {
+  color: hsl(167, 40%, 24%);
+}
+
+.main-footer {
+  display: flex;
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: hsl(168, 34%, 41%, 0.5);
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.footer .menu__link {
+  color: hsl(167, 40%, 24%);
+}
+.footer .logo {
+  filter: invert(0.7);
+  width: 120px;
+}
+.footer .menu__link:hover {
+  color: #fff;
+}
+.icon-container {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+.icon__item {
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.icon__link {
+  display: flex;
+  align-items: center;
+}
+.icon__link:hover {
+  filter: invert(1) brightness(10);
+}
+.footer .menu {
+  padding: 0;
+}
+.icon {
+  width: 15px;
+  height: 15px;
+  color: currentColor;
+}
