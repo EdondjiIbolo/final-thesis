@@ -11,6 +11,13 @@ app.get("/", (req, res) => {
   res.status(200).send("hola");
 });
 app.get("/products", (req, res) => {
+  const { id } = req.query;
+
+  if (id) {
+    const product = produts.all_products?.find((produtc) => produtc.id == id);
+
+    return res.status(200).json(product);
+  }
   res.status(200).json(produts);
 });
 app.get("/images/:id", (req, res) => {
@@ -20,11 +27,11 @@ app.get("/images/:id", (req, res) => {
   // Get the directory name of the current module file
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = dirname(__filename);
-  console.log(__dirname);
+
   // Construct the absolute path to the image file
   const absolutePath = path.join(__dirname, imagePath);
   //   const absolutePath = `${__dirname}/${imagePath}`;
-  console.log(absolutePath);
+
   // Send the image file as a response
   return res.sendFile(absolutePath, (err) => {
     if (err) {

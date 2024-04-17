@@ -3,21 +3,30 @@ import "./cart.css";
 import deletImg from "/images/icon-delete.svg";
 import { useState } from "react";
 import { useStore } from "./store";
-function CartProduct({ product }) {
+import { Link } from "react-router-dom";
+export function CartProduct({ product }) {
   const deleteInCart = useStore((state) => state.deleteInCart);
   return (
     <li className="cart-product__item">
       <section className="cart-product__cont">
         <picture className="cart-product__img">
-          <img src="" alt="" />
+          <img
+            src={product?.imageUrl}
+            alt=""
+            className="rounded w-full h-full object-cover"
+          />
         </picture>
         <div className="div">
-          <p className="product__description">{product?.name}</p>
+          <p className="product__description text-left">
+            {product?.name?.slice(0, 20)}
+          </p>
           <span>
             <p className="product__description">
-              {product?.price} *{product?.cantidad}
+              {product?.new_price} * {product?.cantidad}
             </p>
-            <p className="price">${product?.price * product?.cantidad} </p>
+            <p className="price border-l pl-2 font-bold italic">
+              {product?.new_price * product?.cantidad}${" "}
+            </p>
           </span>
         </div>
       </section>
@@ -50,18 +59,13 @@ export function Cart() {
         )}
       </main>
       {cart.length > 0 && (
-        <div
-          style={{
-            display: "grid",
-            gridAutoFlow: "column",
-            gridAutoColumns: "1fr",
-            gap: "10px",
-          }}
-        >
+        <div className="grid auto-cols-fr grid-flow-col gap-10">
           <button className="btn" onClick={() => clearCart()}>
             Clear Cart
           </button>
-          <button className="btn">Checkout</button>
+          <Link to="/check-out" className="btn">
+            Checkout
+          </Link>
         </div>
       )}
     </section>

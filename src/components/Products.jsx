@@ -1,6 +1,6 @@
 import "./productos.css";
 import { ProductCard } from "./ProductCard";
-import { useProducts } from "../Hooks/useProducts";
+
 export function Products({ collection }) {
   const productos = collection;
 
@@ -8,7 +8,10 @@ export function Products({ collection }) {
     <>
       {productos?.map((product) => {
         return (
-          <div key={product.id} className="product">
+          <div
+            key={product.id}
+            className={`product animate-fade-right animate-once animate-duration-[700ms] animate-delay-[100ms]`}
+          >
             <ProductCard product={product} />
           </div>
         );

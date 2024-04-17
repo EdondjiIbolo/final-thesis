@@ -1,9 +1,8 @@
 .product-card {
-  cursor: pointer;
   border-radius: 4px;
   background: #3a0b0ba4;
   min-height: 100px;
-  height: 330px;
+  height: 360px;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -32,9 +31,15 @@
   display: block;
   transition: all ease-in 250ms;
   height: 60%;
+  cursor: pointer;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .product-card__img:hover::after {
-  content: "Comprar";
+  content: "Add to cart";
   display: flex;
   justify-content: center;
   align-items: center;

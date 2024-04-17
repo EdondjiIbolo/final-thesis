@@ -10,10 +10,16 @@ export const useStore = create((set) => ({
       if (indexPorduct >= 0) {
         const newCart = structuredClone(state.cart);
         newCart[indexPorduct].cantidad = qty;
+        newCart[indexPorduct].amount = qty * product?.new_price;
         // set({cart:newCart})
         return { cart: newCart };
       }
-      return { cart: [...state.cart, { ...product, cantidad: qty }] };
+      return {
+        cart: [
+          ...state.cart,
+          { ...product, cantidad: qty, amount: product.new_price },
+        ],
+      };
     }),
   clearCart: () =>
     set(() => {

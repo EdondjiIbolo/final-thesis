@@ -4,7 +4,7 @@ export function Footer() {
       <footer className="footer  p-3 gap-5 flex-col md:flex-row flex justify-between items-center max-w-[1280px] mx-auto">
         <section className="flex flex-col gap-5">
           <picture className="container-logo">
-            <img src="./images/logo.svg" alt="logo" className="logo  invert" />
+            <img src="/images/logo.svg" alt="logo" className="logo  invert" />
           </picture>
 
           <ul className="flex flex-col md:flex-row gap-3 items-center text-white">
@@ -28,22 +28,22 @@ export function Footer() {
         <ul className="icon-container  flex gap-3 text-white">
           <li className="icon__item">
             <a href="#" className="icon__link">
-              <img src="./images/icon-facebook.svg" alt="" className="icon" />
+              <img src="/images/icon-facebook.svg" alt="" className="icon" />
             </a>
           </li>
           <li className="icon__item">
             <a href="#" className="icon__link">
-              <img src="./images/icon-instagram.svg" alt="" className="icon" />
+              <img src="/images/icon-instagram.svg" alt="" className="icon" />
             </a>
           </li>
           <li className="icon__item">
             <a href="#" className="icon__link">
-              <img src="./images/icon-twitter.svg" alt="" className="icon" />
+              <img src="/images/icon-twitter.svg" alt="" className="icon" />
             </a>
           </li>
           <li className="icon__item">
             <a href="#" className="icon__link">
-              <img src="./images/icon-pinterest.svg" alt="" className="icon" />
+              <img src="/images/icon-pinterest.svg" alt="" className="icon" />
             </a>
           </li>
         </ul>
