@@ -50,7 +50,7 @@ export function Detail() {
 
       return;
     }
-    addToCart(product, 1);
+    addToCart(product, quantity);
   };
   return (
     <main>
